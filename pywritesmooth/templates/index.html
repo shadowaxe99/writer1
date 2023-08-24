@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handwriting Smoothing</title>
+    <link rel='stylesheet' href='{{ url_for('static', filename='css/main.css') }}'>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1>Handwriting Smoothing</h1>
+    <form method='POST'>
+        <p>Please enter your text below and click Submit to smooth your handwriting:</p>
+        <label for='user_input'>Enter your text:</label><br>
+        <input type='text' id='user_input' name='user_input'><br>
+        <input type='submit' value='Submit' class='submit-button'>
+    </form>
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+    <script src='{{ url_for('static', filename='js/main.js') }}'></script>
+{% include 'footer.html' %}
+</body>
+</html>
