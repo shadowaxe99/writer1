@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handwriting Smoothing</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Handwriting Smoothing</h1>
+    <form method="POST">
+        <label for="user_input">Enter your text:</label><br>
+        <input type="text" id="user_input" name="user_input"><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
